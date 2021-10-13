@@ -7,24 +7,25 @@
 word_corr(DataFrameTidy, number, sort = TRUE)
 }
 \arguments{
-\item{DataFrameTidy}{DataFrame of Twitter Data that has been tidy'd.}
+\item{DataFrameTidy}{Data Frame of Twitter Data that has been tidy'd.}
 
 \item{number}{The number of word instances to be included.}
 
 \item{sort}{Rank order the results from most to least correlated.}
 }
 \value{
-A tribble
+A Tibble.
 }
 \description{
-The word correlation displays the mutual relationship between words.
+The word correlation displays the mutual relationship between 
+  words.
 }
 \examples{
-\donttest{
+\dontrun{
 library(saotd)
 data <- raw_tweets
 tidy_data <- Tidy(DataFrame = data)
-TD_Word_Corr <- word_corr(DataFrameTidy = tidy_data, 
+TD_Word_Corr <- word_corr(DataFrameTidy = tidy_data,
                           number = 500,
                           sort = TRUE)
 

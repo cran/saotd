@@ -4,11 +4,16 @@
 \alias{tweet_corpus_distribution}
 \title{Twitter Corpus Distribution}
 \usage{
-tweet_corpus_distribution(DataFrameTidyScores, binwidth = 1,
-  color = "black", fill = "white")
+tweet_corpus_distribution(
+  DataFrameTidyScores,
+  binwidth = 1,
+  color = "black",
+  fill = "grey"
+)
 }
 \arguments{
-\item{DataFrameTidyScores}{DataFrame of Twitter Data that has been tidy'd and scored.}
+\item{DataFrameTidyScores}{DataFrame of Twitter Data that has been tidy'd 
+and scored.}
 
 \item{binwidth}{The width of the bins.  Default is 1.}
 
@@ -20,18 +25,19 @@ tweet_corpus_distribution(DataFrameTidyScores, binwidth = 1,
 A ggplot.
 }
 \description{
-Determines the scores distribution for the entire Twitter data corpus.
+Determines the scores distribution for the entire Twitter 
+  data corpus.
 }
 \examples{
-\donttest{
+\dontrun{
 library(saotd)
 data <- raw_tweets
 tidy_data <- Tidy(DataFrame = data)
-score_data <- tweet_scores(DataFrameTidy = tidy_data, 
-                           HT_Topic = "hashtag") 
+score_data <- tweet_scores(DataFrameTidy = tidy_data,
+                           HT_Topic = "hashtag")
 Corp_Dist <- tweet_corpus_distribution(DataFrameTidyScores = score_data,
                                        binwidth = 1,
-                                       color = "black", 
+                                       color = "black",
                                        fill = "white")
 Corp_Dist
 }

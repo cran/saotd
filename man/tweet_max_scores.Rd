@@ -4,37 +4,40 @@
 \alias{tweet_max_scores}
 \title{Twitter Data Maximum Scores}
 \usage{
-tweet_max_scores(DataFrameTidyScores, HT_Topic,
-  HT_Topic_Selection = NULL)
+tweet_max_scores(DataFrameTidyScores, HT_Topic, HT_Topic_Selection = NULL)
 }
 \arguments{
-\item{DataFrameTidyScores}{DataFrame of Twitter Data that has been tidy'd and scored.}
+\item{DataFrameTidyScores}{DataFrame of Twitter Data that has been tidy'd 
+and scored.}
 
-\item{HT_Topic}{If using hashtag data select:  "hashtag".  If using topic data select:  "topic".}
+\item{HT_Topic}{If using hashtag data select:  "hashtag".  If using topic 
+data select:  "topic".}
 
-\item{HT_Topic_Selection}{THe hashtag or topic to be investigated.  NULL will find min across entire dataframe.}
+\item{HT_Topic_Selection}{The hashtag or topic to be investigated.  NULL will 
+find min across entire data frame.}
 }
 \value{
-A Tidy DataFrame.
+A Tibble.
 }
 \description{
-Determines the Maximum scores for either the entire dataset or the Maximum scores associated with a hashtag or topic analysis.
+Determines the Maximum scores for either the entire dataset or 
+  the Maximum scores associated with a hashtag or topic analysis.
 }
 \examples{
-\donttest{
+\dontrun{
 library(saotd)
 data <- raw_tweets
 tidy_data <- Tidy(DataFrame = data)
-score_data <- tweet_scores(DataFrameTidy = tidy_data, 
+score_data <- tweet_scores(DataFrameTidy = tidy_data,
                            HT_Topic = "hashtag")
-min_scores <- tweet_max_scores(DataFrameTidyScores = score_data, 
+min_scores <- tweet_max_scores(DataFrameTidyScores = score_data,
                                HT_Topic = "hashtag")
-                            
+
 data <- twitter_data
 tidy_data <- Tidy(DataFrame = data)
-score_data <- tweet_scores(DataFrameTidy = tidy_data, 
+score_data <- tweet_scores(DataFrameTidy = tidy_data,
                            HT_Topic = "hashtag")
-min_scores <- tweet_max_scores(DataFrameTidyScores = score_data, 
+min_scores <- tweet_max_scores(DataFrameTidyScores = score_data,
                                HT_Topic = "hashtag",
                                HT_Topic_Selection = "icecream")
 }

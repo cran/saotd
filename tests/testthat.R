@@ -1,4 +1,6 @@
+Sys.setenv(R_TESTS="")
+
 library(testthat)
 library(saotd)
 
-test_check("saotd")
+testthat::test_check("saotd")

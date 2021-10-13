@@ -4,15 +4,22 @@
 \alias{tweet_distribution}
 \title{Twitter Hashtag or Topic Distribution}
 \usage{
-tweet_distribution(DataFrameTidyScores, HT_Topic, binwidth = 1,
-  color = "black", fill = "white")
+tweet_distribution(
+  DataFrameTidyScores,
+  HT_Topic,
+  bin_width = 1,
+  color = "black",
+  fill = "black"
+)
 }
 \arguments{
-\item{DataFrameTidyScores}{DataFrame of Twitter Data that has been tidy'd and scored.}
+\item{DataFrameTidyScores}{DataFrame of Twitter Data that has been tidy'd 
+and scored.}
 
-\item{HT_Topic}{If using hashtag data select:  "hashtag".  If using topic data select:  "topic".}
+\item{HT_Topic}{If using hashtag data select:  "hashtag".  If using topic 
+data select:  "topic".}
 
-\item{binwidth}{The width of the bins.  Default is 1.}
+\item{bin_width}{The width of the bins.  Default is 1.}
 
 \item{color}{The user selected color to highlight the bins.}
 
@@ -22,19 +29,20 @@ tweet_distribution(DataFrameTidyScores, HT_Topic, binwidth = 1,
 A facet wrap ggplot.
 }
 \description{
-Determines the scores distribution by hashtag or topic for Twitter data.
+Determines the scores distribution by hashtag or topic for 
+  Twitter data.
 }
 \examples{
-\donttest{
+\dontrun{
 library(saotd)
 data <- raw_tweets
 tidy_data <- Tidy(DataFrame = data)
-score_data <- tweet_scores(DataFrameTidy = tidy_data, 
-                           HT_Topic = "hashtag") 
+score_data <- tweet_scores(DataFrameTidy = tidy_data,
+                           HT_Topic = "hashtag")
 Dist <- tweet_distribution(DataFrameTidyScores = score_data,
                      HT_Topic = "hashtag",
-                     binwidth = 1,
-                     color = "black", 
+                     bin_width = 1,
+                     color = "black",
                      fill = "white")
 Dist
 }
