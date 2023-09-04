@@ -2,6 +2,11 @@
 knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
                       # eval = requireNamespace("rtweet", quietly = TRUE))
 
+options(rmarkdown.html_vignette.check_title = FALSE)
+
+## ----workflow, echo=FALSE, out.width="100%"-----------------------------------
+knitr::include_graphics(path = "saotd_workflow.png")
+
 ## ----packages, warning=FALSE, message=FALSE-----------------------------------
 library(saotd)
 library(dplyr)

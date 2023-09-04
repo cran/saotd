@@ -134,11 +134,11 @@ number_topics <- function(DataFrame,
     levels = c(FALSE, TRUE),
     labels = c("minimize", "maximize"))
   p <- ggplot2::ggplot(data = values,
-                       aes_string(x = "topics",
+                       aes(x = "topics",
                                   y = "value",
                                   group = "variable")) +
     ggplot2::geom_line() +
-    ggplot2::geom_point(aes_string(shape = "variable"),
+    ggplot2::geom_point(aes(shape = "variable"),
                         size = 3) +
     ggplot2::guides(
       size = "none",

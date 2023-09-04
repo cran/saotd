@@ -1,8 +1,8 @@
 Package: saotd
 Type: Package
 Title: Sentiment Analysis of Twitter Data
-Version: 0.3.0
-Date: 2021-10-11
+Version: 0.3.1
+Date: 2023-09-03
 Authors@R: c(
     person("Evan", "Munson", 
            email = "evan.l.munson@gmail.com", 
@@ -34,7 +34,7 @@ Language: en-US
 Imports: dplyr, widyr, stringr, tidytext, rtweet, tidyr, igraph,
         ggplot2, ggraph, scales, reshape2, lubridate, utils, stats,
         magrittr, ldatuning, topicmodels
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Suggests: testthat (>= 3.0.0), knitr, rmarkdown, httr, base64enc,
         tibble, covr
 Depends: R (>= 3.5.0)
@@ -44,10 +44,10 @@ Encoding: UTF-8
 LazyLoad: true
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2021-10-12 14:00:34 UTC; munson
+Packaged: 2023-09-03 23:38:21 UTC; munson
 Author: Evan Munson [aut, cre] (<https://orcid.org/0000-0002-9958-6800>),
   Christopher Smith [aut] (<https://orcid.org/0000-0002-8288-270X>),
   Bradley Boehmke [aut] (<https://orcid.org/0000-0002-3611-8516>),
   Jason Freels [aut] (<https://orcid.org/0000-0002-2415-0340>)
 Repository: CRAN
-Date/Publication: 2021-10-13 09:50:02 UTC
+Date/Publication: 2023-09-04 08:40:07 UTC
